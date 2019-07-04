@@ -1,0 +1,27 @@
+<script>
+    function leeftijd(){
+        var leeftijd = document.getElementById("tekstveld").value;
+
+        if(leeftijd >= 18){
+            var elem = document.getElementById("resultaat");
+            elem.style.backgroundColor = "green";
+        }
+        if(leeftijd >= 16 && leeftijd< 18){
+            var elem = document.getElementById("resultaat");
+            elem.style.backgroundColor = "orange";
+        }
+        if(leeftijd < 16){
+            var elem = document.getElementById("resultaat");
+            elem.style.backgroundColor = "red";
+        }
+    }
+</script>
+
+Leeftijd controleren
+
+<br>
+
+<input type=text id=tekstveld>
+<input type=button value=controleren onclick=leeftijd()>
+
+<div id=resultaat>Oud genoeg?</div>
